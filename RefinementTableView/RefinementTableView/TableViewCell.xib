@@ -31,8 +31,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Ah-jr-R6Q">
-                        <rect key="frame" x="295" y="5" width="20" height="34"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5Ah-jr-R6Q">
+                        <rect key="frame" x="295" y="7" width="20" height="30.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="1rp-oO-iuE"/>
                         </constraints>
@@ -55,4 +55,7 @@
             <point key="canvasLocation" x="140.57971014492756" y="125.89285714285714"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="chevron.right" catalog="system" width="48" height="64"/>
+    </resources>
 </document>
