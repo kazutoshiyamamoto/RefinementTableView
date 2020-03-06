@@ -14,6 +14,7 @@
 		FD03D95E2411488700C20FC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD03D95D2411488700C20FC0 /* Assets.xcassets */; };
 		FD03D9612411488700C20FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD03D95F2411488700C20FC0 /* LaunchScreen.storyboard */; };
 		FD03D96B24125BD800C20FC0 /* RefinementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */; };
+		FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FD03D9602411488700C20FC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD03D9622411488700C20FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefinementTableViewController.swift; sourceTree = "<group>"; };
+		FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RefinementTable.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				FD03D9562411488400C20FC0 /* SceneDelegate.swift */,
 				FD03D9582411488400C20FC0 /* ViewController.swift */,
 				FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */,
+				FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */,
 				FD03D95A2411488400C20FC0 /* Main.storyboard */,
 				FD03D95D2411488700C20FC0 /* Assets.xcassets */,
 				FD03D95F2411488700C20FC0 /* LaunchScreen.storyboard */,
@@ -130,6 +133,7 @@
 			files = (
 				FD03D9612411488700C20FC0 /* LaunchScreen.storyboard in Resources */,
 				FD03D95E2411488700C20FC0 /* Assets.xcassets in Resources */,
+				FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */,
 				FD03D95C2411488400C20FC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
