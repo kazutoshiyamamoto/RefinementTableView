@@ -15,13 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-bs-TnW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8gk-bs-TnW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8gk-bs-TnW" firstAttribute="leading" secondItem="tmg-lv-orS" secondAttribute="leading" id="0Bt-uI-vKr"/>
+                            <constraint firstItem="8gk-bs-TnW" firstAttribute="bottom" secondItem="tmg-lv-orS" secondAttribute="bottom" id="3s0-8g-weG"/>
+                            <constraint firstItem="8gk-bs-TnW" firstAttribute="trailing" secondItem="tmg-lv-orS" secondAttribute="trailing" id="3uY-oX-Zai"/>
+                            <constraint firstItem="8gk-bs-TnW" firstAttribute="top" secondItem="tmg-lv-orS" secondAttribute="top" id="J76-6k-HNV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="tmg-lv-orS"/>
                     </view>
                 </viewController>
