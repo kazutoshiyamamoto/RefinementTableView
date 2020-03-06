@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
 
+    @IBOutlet weak var RefinementConditionTitle: UILabel!
+    @IBOutlet weak var RefinementCondition: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -52,6 +52,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="RefinementCondition" destination="hRe-Np-PwJ" id="DqG-WP-jZy"/>
+                <outlet property="RefinementConditionTitle" destination="bX4-BZ-K4C" id="NAQ-nV-372"/>
+            </connections>
             <point key="canvasLocation" x="140.57971014492756" y="125.89285714285714"/>
         </tableViewCell>
     </objects>
