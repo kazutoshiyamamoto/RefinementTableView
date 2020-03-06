@@ -15,6 +15,8 @@
 		FD03D9612411488700C20FC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD03D95F2411488700C20FC0 /* LaunchScreen.storyboard */; };
 		FD03D96B24125BD800C20FC0 /* RefinementTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */; };
 		FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */; };
+		FDFCC9D5241260BD00DDA38A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */; };
+		FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FD03D9622411488700C20FC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefinementTableViewController.swift; sourceTree = "<group>"; };
 		FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RefinementTable.storyboard; sourceTree = "<group>"; };
+		FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 				FD03D9582411488400C20FC0 /* ViewController.swift */,
 				FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */,
 				FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */,
+				FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */,
+				FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */,
 				FD03D95A2411488400C20FC0 /* Main.storyboard */,
 				FD03D95D2411488700C20FC0 /* Assets.xcassets */,
 				FD03D95F2411488700C20FC0 /* LaunchScreen.storyboard */,
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD03D9612411488700C20FC0 /* LaunchScreen.storyboard in Resources */,
+				FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */,
 				FD03D95E2411488700C20FC0 /* Assets.xcassets in Resources */,
 				FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */,
 				FD03D95C2411488400C20FC0 /* Main.storyboard in Resources */,
@@ -145,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDFCC9D5241260BD00DDA38A /* TableViewCell.swift in Sources */,
 				FD03D9592411488400C20FC0 /* ViewController.swift in Sources */,
 				FD03D9552411488400C20FC0 /* AppDelegate.swift in Sources */,
 				FD03D96B24125BD800C20FC0 /* RefinementTableViewController.swift in Sources */,
