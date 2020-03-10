@@ -10,7 +10,7 @@
         <!--Category View Controller-->
         <scene sceneID="cnY-is-VOU">
             <objects>
-                <viewController id="lJg-N7-vnO" customClass="CategoryViewController" customModule="RefinementTableView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Category" useStoryboardIdentifierAsRestorationIdentifier="YES" id="lJg-N7-vnO" customClass="CategoryViewController" customModule="RefinementTableView" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kP1-Cp-k8n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
