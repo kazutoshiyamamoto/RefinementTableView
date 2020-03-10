@@ -15,6 +15,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func tappedButton(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
