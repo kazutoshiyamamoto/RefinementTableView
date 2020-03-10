@@ -38,6 +38,10 @@ extension RefinementTableViewController: UITableViewDataSource {
 extension RefinementTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Category", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Category") as! CategoryViewController
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
