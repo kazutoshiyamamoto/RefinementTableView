@@ -17,6 +17,8 @@
 		FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */; };
 		FD37DC6024178F1200AA9AB5 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD37DC5F24178F1200AA9AB5 /* Category.storyboard */; };
 		FD37DC6224178F7C00AA9AB5 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37DC6124178F7C00AA9AB5 /* CategoryViewController.swift */; };
+		FD37DC672419334400AA9AB5 /* PriceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD37DC652419334400AA9AB5 /* PriceCell.swift */; };
+		FD37DC682419334400AA9AB5 /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37DC662419334400AA9AB5 /* PriceCell.xib */; };
 		FDFCC9D5241260BD00DDA38A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */; };
 		FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 		FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RefinementTable.storyboard; sourceTree = "<group>"; };
 		FD37DC5F24178F1200AA9AB5 /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
 		FD37DC6124178F7C00AA9AB5 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		FD37DC652419334400AA9AB5 /* PriceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCell.swift; sourceTree = "<group>"; };
+		FD37DC662419334400AA9AB5 /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
 		FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +81,8 @@
 				FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */,
 				FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */,
 				FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */,
+				FD37DC652419334400AA9AB5 /* PriceCell.swift */,
+				FD37DC662419334400AA9AB5 /* PriceCell.xib */,
 				FD03D95A2411488400C20FC0 /* Main.storyboard */,
 				FD03D95D2411488700C20FC0 /* Assets.xcassets */,
 				FD03D95F2411488700C20FC0 /* LaunchScreen.storyboard */,
@@ -148,6 +154,7 @@
 				FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */,
 				FD03D95E2411488700C20FC0 /* Assets.xcassets in Resources */,
 				FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */,
+				FD37DC682419334400AA9AB5 /* PriceCell.xib in Resources */,
 				FD03D95C2411488400C20FC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDFCC9D5241260BD00DDA38A /* TableViewCell.swift in Sources */,
+				FD37DC672419334400AA9AB5 /* PriceCell.swift in Sources */,
 				FD03D9592411488400C20FC0 /* ViewController.swift in Sources */,
 				FD03D9552411488400C20FC0 /* AppDelegate.swift in Sources */,
 				FD03D96B24125BD800C20FC0 /* RefinementTableViewController.swift in Sources */,
