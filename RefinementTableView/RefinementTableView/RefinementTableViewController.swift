@@ -39,9 +39,17 @@ extension RefinementTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
-        cell.RefinementConditionTitle.text = self.refinementMenuTitle[indexPath.row]
-        return cell
+        if indexPath.section == 0 {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
+            cell.RefinementConditionTitle.text = self.refinementMenuTitle[indexPath.row]
+            cell.RefinementCondition.text = self.category
+            
+            return cell
+        } else {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "PriceCell", for: indexPath) as! PriceCell
+            
+            return cell
+        }
     }
 }
 
