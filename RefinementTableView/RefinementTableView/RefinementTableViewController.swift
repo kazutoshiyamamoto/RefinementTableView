@@ -31,7 +31,11 @@ extension RefinementTableViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.refinementMenuTitle.count
+        if section == 0 {
+            return self.refinementMenuTitle.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
