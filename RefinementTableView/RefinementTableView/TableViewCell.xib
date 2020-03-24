@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="RefinementTableView" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="44" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="RefinementTableView" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX4-BZ-K4C">
-                        <rect key="frame" x="5" y="10" width="75" height="24"/>
+                        <rect key="frame" x="10" y="10" width="70" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,7 +40,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="hRe-Np-PwJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="8Cf-O2-Jam"/>
-                    <constraint firstItem="bX4-BZ-K4C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Iof-96-OCY"/>
+                    <constraint firstItem="bX4-BZ-K4C" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Iof-96-OCY"/>
                     <constraint firstAttribute="bottom" secondItem="bX4-BZ-K4C" secondAttribute="bottom" constant="10" id="Xa9-Ww-4bp"/>
                     <constraint firstItem="hRe-Np-PwJ" firstAttribute="leading" secondItem="bX4-BZ-K4C" secondAttribute="trailing" constant="10" id="bZ8-gT-uYc"/>
                     <constraint firstAttribute="bottom" secondItem="hRe-Np-PwJ" secondAttribute="bottom" constant="5" id="cSF-3J-Urr"/>
