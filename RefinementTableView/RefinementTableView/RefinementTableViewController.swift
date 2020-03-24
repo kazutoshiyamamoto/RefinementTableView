@@ -25,6 +25,11 @@ class RefinementTableViewController: UIViewController {
 }
 
 extension RefinementTableViewController: UITableViewDataSource {
+    // セクション数
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.refinementMenuTitle.count
     }
