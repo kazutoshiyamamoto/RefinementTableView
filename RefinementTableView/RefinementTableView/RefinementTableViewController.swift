@@ -18,6 +18,7 @@ class RefinementTableViewController: UIViewController {
         super.viewDidLoad()
         
         self.tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
+        self.tableView.register(UINib(nibName: "PriceCell", bundle: nil), forCellReuseIdentifier: "PriceCell")
         
         self.tableView.tableFooterView = UIView()
     }
