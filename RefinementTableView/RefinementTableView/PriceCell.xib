@@ -71,6 +71,10 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="maxPrice" destination="EnN-cy-lyI" id="Zna-yn-xnC"/>
+                <outlet property="minPrice" destination="NlJ-6f-i5d" id="G4t-cb-Z1z"/>
+            </connections>
             <point key="canvasLocation" x="140.57971014492756" y="120.53571428571428"/>
         </tableViewCell>
     </objects>

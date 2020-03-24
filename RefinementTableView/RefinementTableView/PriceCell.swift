@@ -10,6 +10,9 @@ import UIKit
 
 class PriceCell: UITableViewCell {
 
+    @IBOutlet weak var minPrice: UITextField!
+    @IBOutlet weak var maxPrice: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
