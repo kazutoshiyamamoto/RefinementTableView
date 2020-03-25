@@ -55,6 +55,8 @@ extension RefinementTableViewController: UITableViewDataSource {
 
 extension RefinementTableViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
         if indexPath.section == 0 {
             self.tableView.deselectRow(at: indexPath, animated: true)
             
