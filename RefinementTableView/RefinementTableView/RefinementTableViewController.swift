@@ -14,6 +14,8 @@ class RefinementTableViewController: UIViewController {
     
     private let refinementMenuTitle = ["カテゴリ"]
     
+    var category = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
