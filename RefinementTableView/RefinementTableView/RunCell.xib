@@ -17,10 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcc-MA-M8l">
-                        <rect key="frame" x="175" y="5" width="120" height="34"/>
+                        <rect key="frame" x="185" y="8" width="130" height="28"/>
                         <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="Ol8-25-cWr"/>
+                            <constraint firstAttribute="width" constant="130" id="6x6-Ss-0qv"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <state key="normal" title="検索する">
@@ -28,9 +28,9 @@
                         </state>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8O-o7-Sde">
-                        <rect key="frame" x="25" y="5" width="120" height="34"/>
+                        <rect key="frame" x="5" y="8" width="130" height="28"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="120" id="9VV-qW-exF"/>
+                            <constraint firstAttribute="width" constant="130" id="ZhR-of-XS7"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,12 +40,12 @@
                     </button>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="V8O-o7-Sde" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="1XI-Vs-W1a"/>
-                    <constraint firstItem="V8O-o7-Sde" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Je8-yW-s3f"/>
-                    <constraint firstAttribute="bottom" secondItem="qcc-MA-M8l" secondAttribute="bottom" constant="5" id="KRv-Ki-0bs"/>
-                    <constraint firstItem="qcc-MA-M8l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="gLp-VO-fdk"/>
-                    <constraint firstAttribute="bottom" secondItem="V8O-o7-Sde" secondAttribute="bottom" constant="5" id="njn-uC-TnJ"/>
-                    <constraint firstAttribute="trailing" secondItem="qcc-MA-M8l" secondAttribute="trailing" constant="25" id="vc3-Cc-GY7"/>
+                    <constraint firstItem="V8O-o7-Sde" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="1XI-Vs-W1a"/>
+                    <constraint firstAttribute="bottom" secondItem="qcc-MA-M8l" secondAttribute="bottom" constant="8" id="KRv-Ki-0bs"/>
+                    <constraint firstItem="V8O-o7-Sde" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-90" id="VkF-SI-o08"/>
+                    <constraint firstItem="qcc-MA-M8l" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="gLp-VO-fdk"/>
+                    <constraint firstItem="qcc-MA-M8l" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="90" id="lhw-Vs-VRx"/>
+                    <constraint firstAttribute="bottom" secondItem="V8O-o7-Sde" secondAttribute="bottom" constant="8" id="njn-uC-TnJ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
