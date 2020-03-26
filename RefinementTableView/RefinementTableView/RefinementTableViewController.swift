@@ -48,8 +48,14 @@ extension RefinementTableViewController: UITableViewDataSource {
             cell.RefinementCondition.text = self.category
             
             return cell
-        } else {
+        } else if indexPath.section == 1 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "PriceCell", for: indexPath) as! PriceCell
+            // セル選択アニメーションを表示しない
+            cell.selectionStyle = .none
+            
+            return cell
+        } else {
+            let cell = self.tableView.dequeueReusableCell(withIdentifier: "RunCell", for: indexPath) as! RunCell
             // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
