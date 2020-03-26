@@ -10,6 +10,9 @@ import UIKit
 
 class RunCell: UITableViewCell {
 
+    @IBOutlet weak var clearButton: UIButton!
+    @IBOutlet weak var searchButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
