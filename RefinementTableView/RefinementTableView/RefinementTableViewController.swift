@@ -49,7 +49,7 @@ extension RefinementTableViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "PriceCell", for: indexPath) as! PriceCell
-            // セル選択不可
+            // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
             return cell
@@ -67,8 +67,6 @@ extension RefinementTableViewController: UITableViewDelegate {
             let storyboard: UIStoryboard = UIStoryboard(name: "Category", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Category") as! CategoryViewController
             self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            print("価格設定セルが押された")
         }
     }
 }
