@@ -56,6 +56,10 @@ extension RefinementTableViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "RunCell", for: indexPath) as! RunCell
+            cell.clearButton.layer.borderWidth = 0.5
+            cell.clearButton.layer.borderColor = UIColor.red.cgColor
+            cell.clearButton.layer.cornerRadius = 5
+            cell.searchButton.layer.cornerRadius = 5
             // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
