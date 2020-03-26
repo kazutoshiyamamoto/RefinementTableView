@@ -49,6 +49,8 @@ extension RefinementTableViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "PriceCell", for: indexPath) as! PriceCell
+            // セル選択不可
+            cell.selectionStyle = .none
             
             return cell
         }
