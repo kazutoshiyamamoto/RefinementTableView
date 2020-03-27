@@ -63,6 +63,9 @@ extension RefinementTableViewController: UITableViewDataSource {
             // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
+            cell.searchButtonDelegate = self
+            cell.clearButtonDelegate = self
+            
             return cell
         }
     }
@@ -82,3 +85,14 @@ extension RefinementTableViewController: UITableViewDelegate {
     }
 }
 
+extension RefinementTableViewController: SearchButtonDelegate {
+    func tappedSearchButton() {
+        print("検索が押された")
+    }
+}
+
+extension RefinementTableViewController: ClearButtonDelegate {
+    func tappedClearButton() {
+        print("クリアが押された")
+    }
+}
