@@ -20,6 +20,9 @@ class RunCell: UITableViewCell {
 
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
+    
+    var searchButtonDelegate: SearchButtonDelegate?
+    var clearButtonDelegate: ClearButtonDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,4 +35,11 @@ class RunCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func tappedSearchButton(_ sender: Any) {
+        self.searchButtonDelegate?.tappedSearchButton()
+    }
+    
+    @IBAction func tappedClearButton(_ sender: Any) {
+        self.clearButtonDelegate?.tappedClearButton()
+    }
 }
