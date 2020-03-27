@@ -15,6 +15,8 @@ class RefinementTableViewController: UIViewController {
     private let refinementMenuTitle = ["カテゴリ"]
     
     var category = ""
+    private var minPrice = 0
+    private var maxPrice = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,6 +95,9 @@ extension RefinementTableViewController: SearchButtonDelegate {
 
 extension RefinementTableViewController: ClearButtonDelegate {
     func tappedClearButton() {
-        print("クリアが押された")
+        self.category = ""
+        self.minPrice = 0
+        self.maxPrice = 0
     }
 }
+
