@@ -21,6 +21,7 @@
 		FD37DC682419334400AA9AB5 /* PriceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD37DC662419334400AA9AB5 /* PriceCell.xib */; };
 		FD3E88F0242CDE0200E028B7 /* RunCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E88EE242CDE0200E028B7 /* RunCell.swift */; };
 		FD3E88F1242CDE0200E028B7 /* RunCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3E88EF242CDE0200E028B7 /* RunCell.xib */; };
+		FD3E88F32431F5B200E028B7 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E88F22431F5B200E028B7 /* UITextField+Extensions.swift */; };
 		FDFCC9D5241260BD00DDA38A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */; };
 		FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		FD37DC662419334400AA9AB5 /* PriceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceCell.xib; sourceTree = "<group>"; };
 		FD3E88EE242CDE0200E028B7 /* RunCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCell.swift; sourceTree = "<group>"; };
 		FD3E88EF242CDE0200E028B7 /* RunCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunCell.xib; sourceTree = "<group>"; };
+		FD3E88F22431F5B200E028B7 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +92,7 @@
 				FD3E88EE242CDE0200E028B7 /* RunCell.swift */,
 				FD3E88EF242CDE0200E028B7 /* RunCell.xib */,
 				FD03D95A2411488400C20FC0 /* Main.storyboard */,
+				FD3E88F22431F5B200E028B7 /* UITextField+Extensions.swift */,
 				FD03D95D2411488700C20FC0 /* Assets.xcassets */,
 				FD03D95F2411488700C20FC0 /* LaunchScreen.storyboard */,
 				FD03D9622411488700C20FC0 /* Info.plist */,
@@ -179,6 +182,7 @@
 				FD03D9552411488400C20FC0 /* AppDelegate.swift in Sources */,
 				FD03D96B24125BD800C20FC0 /* RefinementTableViewController.swift in Sources */,
 				FD3E88F0242CDE0200E028B7 /* RunCell.swift in Sources */,
+				FD3E88F32431F5B200E028B7 /* UITextField+Extensions.swift in Sources */,
 				FD37DC6224178F7C00AA9AB5 /* CategoryViewController.swift in Sources */,
 				FD03D9572411488400C20FC0 /* SceneDelegate.swift in Sources */,
 			);
