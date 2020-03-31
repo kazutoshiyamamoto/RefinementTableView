@@ -15,8 +15,8 @@ class RefinementTableViewController: UIViewController {
     private let refinementMenuTitle = ["カテゴリ"]
     
     var category = ""
-    private var minPrice = 0
-    private var maxPrice = 0
+    private var minPrice = ""
+    private var maxPrice = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,25 @@ class RefinementTableViewController: UIViewController {
         self.tableView.register(UINib(nibName: "RunCell", bundle: nil), forCellReuseIdentifier: "RunCell")
         
         self.tableView.tableFooterView = UIView()
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(type(of: self).setMinPrice(notification:)), name: .setMinPrice, object: nil)
+        center.addObserver(self, selector: #selector(type(of: self).setMaxPrice(notification:)), name: .setMaxPrice, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // カテゴリ選択画面から戻ってきた時にセルを更新して選択したカテゴリを表示
+        // TODO:戻ってきた時のみリロードするよう変更が必要
+        self.tableView.reloadData()
+    }
+    
+    @objc func setMinPrice(notification: NSNotification?) {
+        self.minPrice = notification?.userInfo!["minPrice"] as! String
+    }
+    
+    @objc func setMaxPrice(notification: NSNotification?) {
+        self.maxPrice = notification?.userInfo!["maxPrice"] as! String
     }
 }
 
@@ -50,12 +69,14 @@ extension RefinementTableViewController: UITableViewDataSource {
             cell.RefinementCondition.text = self.category
             
             return cell
+            
         } else if indexPath.section == 1 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "PriceCell", for: indexPath) as! PriceCell
             // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
             return cell
+            
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "RunCell", for: indexPath) as! RunCell
             cell.clearButton.layer.borderWidth = 0.5
@@ -69,6 +90,7 @@ extension RefinementTableViewController: UITableViewDataSource {
             cell.clearButtonDelegate = self
             
             return cell
+            
         }
     }
 }
@@ -90,14 +112,18 @@ extension RefinementTableViewController: UITableViewDelegate {
 extension RefinementTableViewController: SearchButtonDelegate {
     func tappedSearchButton() {
         print("検索が押された")
+        
+        print("\(self.category)")
+        print("\(self.minPrice)")
+        print("\(self.maxPrice)")
     }
 }
 
 extension RefinementTableViewController: ClearButtonDelegate {
     func tappedClearButton() {
         self.category = ""
-        self.minPrice = 0
-        self.maxPrice = 0
+        self.minPrice = ""
+        self.maxPrice = ""
     }
 }
 
