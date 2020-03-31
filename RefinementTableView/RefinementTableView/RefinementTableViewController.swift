@@ -25,11 +25,16 @@ class RefinementTableViewController: UIViewController {
         self.tableView.register(UINib(nibName: "PriceCell", bundle: nil), forCellReuseIdentifier: "PriceCell")
         self.tableView.register(UINib(nibName: "RunCell", bundle: nil), forCellReuseIdentifier: "RunCell")
         
-        self.tableView.tableFooterView = UIView()
-        
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(type(of: self).setMinPrice(notification:)), name: .setMinPrice, object: nil)
         center.addObserver(self, selector: #selector(type(of: self).setMaxPrice(notification:)), name: .setMaxPrice, object: nil)
+        
+        // キーボード外を選択した時にキーボードを非表示にする
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RefinementTableViewController.tappedKeyboardAround(_:)))
+        tapGesture.cancelsTouchesInView = false
+        self.tableView.addGestureRecognizer(tapGesture)
+        
+        self.tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,12 +44,19 @@ class RefinementTableViewController: UIViewController {
         self.tableView.reloadData()
     }
     
+    // 最低価格入力欄に数字を入力するたびに呼ばれる
     @objc func setMinPrice(notification: NSNotification?) {
         self.minPrice = notification?.userInfo!["minPrice"] as! String
     }
     
+    // 最高価格入力欄に数字を入力するたびに呼ばれる
     @objc func setMaxPrice(notification: NSNotification?) {
         self.maxPrice = notification?.userInfo!["maxPrice"] as! String
+    }
+    
+    @objc func tappedKeyboardAround(_ sender: UITapGestureRecognizer) {
+        // キーボード表示時にキーボード外を選択すると非表示に変更
+        self.view.endEditing(true)
     }
 }
 
@@ -90,7 +102,6 @@ extension RefinementTableViewController: UITableViewDataSource {
             cell.clearButtonDelegate = self
             
             return cell
-            
         }
     }
 }
