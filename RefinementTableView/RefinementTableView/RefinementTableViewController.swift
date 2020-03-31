@@ -14,7 +14,7 @@ class RefinementTableViewController: UIViewController {
     
     private let refinementMenuTitle = ["カテゴリ"]
     
-    var category = ""
+    private var category = ""
     private var minPrice = ""
     private var maxPrice = ""
     
@@ -26,6 +26,7 @@ class RefinementTableViewController: UIViewController {
         self.tableView.register(UINib(nibName: "RunCell", bundle: nil), forCellReuseIdentifier: "RunCell")
         
         let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(type(of: self).setCategory(notification:)), name: .setCategory, object: nil)
         center.addObserver(self, selector: #selector(type(of: self).setMinPrice(notification:)), name: .setMinPrice, object: nil)
         center.addObserver(self, selector: #selector(type(of: self).setMaxPrice(notification:)), name: .setMaxPrice, object: nil)
         
@@ -41,6 +42,14 @@ class RefinementTableViewController: UIViewController {
         super.viewWillAppear(animated)
         // カテゴリ選択画面から戻ってきた時にセルを更新して選択したカテゴリを表示
         // TODO:戻ってきた時のみリロードするよう変更が必要
+        self.tableView.reloadData()
+    }
+    
+    // カテゴリ選択すると呼ばれる
+    @objc func setCategory(notification: NSNotification?) {
+        self.category = notification?.userInfo!["category"] as! String
+
+        // セルに選択したカテゴリ名を表示するためtableViewを更新
         self.tableView.reloadData()
     }
     

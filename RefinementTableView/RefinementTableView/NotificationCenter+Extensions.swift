@@ -9,6 +9,8 @@
 import Foundation
 
 extension Notification.Name {
+    static let setCategory = Notification.Name("setCategory")
+    
     static let setMinPrice = Notification.Name("setMinPrice")
     static let setMaxPrice = Notification.Name("setMaxPrice")
 }

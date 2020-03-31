@@ -37,9 +37,8 @@ extension CategoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.deselectRow(at: indexPath, animated: true)
         
-        // 前の画面に値を渡して戻る
-        let refinementTableViewController = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 2] as! RefinementTableViewController
-        refinementTableViewController.category = self.categoryName[indexPath.row]
+        let center = NotificationCenter.default
+        center.post(name: .setCategory, object: nil, userInfo: ["category": self.categoryName[indexPath.row]])
         
         self.navigationController?.popViewController(animated: true)
     }
