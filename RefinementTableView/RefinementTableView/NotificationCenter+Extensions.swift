@@ -13,4 +13,7 @@ extension Notification.Name {
     
     static let setMinPrice = Notification.Name("setMinPrice")
     static let setMaxPrice = Notification.Name("setMaxPrice")
+    
+    static let tappedSearchButton = Notification.Name("tappedSearchButton")
+    static let tappedClearButton = Notification.Name("tappedClearButton")
 }

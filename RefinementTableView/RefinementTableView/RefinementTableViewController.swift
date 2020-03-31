@@ -29,6 +29,8 @@ class RefinementTableViewController: UIViewController {
         center.addObserver(self, selector: #selector(type(of: self).setCategory(notification:)), name: .setCategory, object: nil)
         center.addObserver(self, selector: #selector(type(of: self).setMinPrice(notification:)), name: .setMinPrice, object: nil)
         center.addObserver(self, selector: #selector(type(of: self).setMaxPrice(notification:)), name: .setMaxPrice, object: nil)
+        center.addObserver(self, selector: #selector(type(of: self).tappedSearchButton(notification:)), name: .tappedSearchButton, object: nil)
+        center.addObserver(self, selector: #selector(type(of: self).tappedClearButton(notification:)), name: .tappedClearButton, object: nil)
         
         // キーボード外を選択した時にキーボードを非表示にする
         let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(RefinementTableViewController.tappedKeyboardAround(_:)))
@@ -61,6 +63,22 @@ class RefinementTableViewController: UIViewController {
     // 最高価格入力欄に数字を入力するたびに呼ばれる
     @objc func setMaxPrice(notification: NSNotification?) {
         self.maxPrice = notification?.userInfo!["maxPrice"] as! String
+    }
+    
+    // 「検索する」を選択すると呼ばれる
+    @objc func tappedSearchButton(notification: NSNotification?) {
+        print("検索が押された")
+        
+        print("\(self.category)")
+        print("\(self.minPrice)")
+        print("\(self.maxPrice)")
+    }
+    
+    // 「クリア」を選択すると呼ばれる
+    @objc func tappedClearButton(notification: NSNotification?) {
+        self.category = ""
+        self.minPrice = ""
+        self.maxPrice = ""
     }
     
     @objc func tappedKeyboardAround(_ sender: UITapGestureRecognizer) {
@@ -107,9 +125,6 @@ extension RefinementTableViewController: UITableViewDataSource {
             // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
-            cell.searchButtonDelegate = self
-            cell.clearButtonDelegate = self
-            
             return cell
         }
     }
@@ -126,24 +141,6 @@ extension RefinementTableViewController: UITableViewDelegate {
             let vc = storyboard.instantiateViewController(withIdentifier: "Category") as! CategoryViewController
             self.navigationController?.pushViewController(vc, animated: true)
         }
-    }
-}
-
-extension RefinementTableViewController: SearchButtonDelegate {
-    func tappedSearchButton() {
-        print("検索が押された")
-        
-        print("\(self.category)")
-        print("\(self.minPrice)")
-        print("\(self.maxPrice)")
-    }
-}
-
-extension RefinementTableViewController: ClearButtonDelegate {
-    func tappedClearButton() {
-        self.category = ""
-        self.minPrice = ""
-        self.maxPrice = ""
     }
 }
 
