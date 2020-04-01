@@ -79,6 +79,9 @@ class RefinementTableViewController: UIViewController {
         self.category = ""
         self.minPrice = ""
         self.maxPrice = ""
+        
+        // 入力した値の表示を画面上でもクリア
+        self.tableView.reloadData()
     }
     
     @objc func tappedKeyboardAround(_ sender: UITapGestureRecognizer) {
@@ -111,6 +114,8 @@ extension RefinementTableViewController: UITableViewDataSource {
             
         } else if indexPath.section == 1 {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "PriceCell", for: indexPath) as! PriceCell
+            cell.minPrice.text = self.minPrice
+            cell.maxPrice.text = self.maxPrice
             // セル選択アニメーションを表示しない
             cell.selectionStyle = .none
             
