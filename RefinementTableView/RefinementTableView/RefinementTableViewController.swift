@@ -50,7 +50,7 @@ class RefinementTableViewController: UIViewController {
     // カテゴリ選択すると呼ばれる
     @objc func setCategory(notification: NSNotification?) {
         self.category = notification?.userInfo!["category"] as! String
-
+        
         // セルに選択したカテゴリ名を表示するためtableViewを更新
         self.tableView.reloadData()
     }
@@ -67,11 +67,10 @@ class RefinementTableViewController: UIViewController {
     
     // 「検索する」を選択すると呼ばれる
     @objc func tappedSearchButton(notification: NSNotification?) {
-        print("検索が押された")
+        let center = NotificationCenter.default
+        center.post(name: .setCondition, object: nil, userInfo: ["category": self.category, "minPrice": self.minPrice, "maxPrice": self.maxPrice])
         
-        print("\(self.category)")
-        print("\(self.minPrice)")
-        print("\(self.maxPrice)")
+        self.navigationController?.popViewController(animated: true)
     }
     
     // 「クリア」を選択すると呼ばれる

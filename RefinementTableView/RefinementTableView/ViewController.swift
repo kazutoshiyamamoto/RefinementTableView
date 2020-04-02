@@ -17,6 +17,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        let center = NotificationCenter.default
+        center.addObserver(self, selector: #selector(type(of: self).setCondition(notification:)), name: .setCondition, object: nil)
+    }
+    
+    @objc func setCondition(notification: NSNotification?) {
+        self.category.text = notification?.userInfo!["category"] as? String
+        self.minPrice.text = notification?.userInfo!["minPrice"] as? String
+        self.maxPrice.text = notification?.userInfo!["maxPrice"] as? String
     }
 
     @IBAction func tappedButton(_ sender: Any) {
