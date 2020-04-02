@@ -59,6 +59,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="6bm-Oq-uMf"/>
+                    <connections>
+                        <outlet property="category" destination="pZO-WL-FYZ" id="Ehu-DE-R9j"/>
+                        <outlet property="maxPrice" destination="pGY-Sc-J0u" id="jdp-yU-5Px"/>
+                        <outlet property="minPrice" destination="aTO-U0-k9h" id="U68-yW-Cef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

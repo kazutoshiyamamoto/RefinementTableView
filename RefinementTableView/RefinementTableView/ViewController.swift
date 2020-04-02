@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var minPrice: UILabel!
+    @IBOutlet weak var maxPrice: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
