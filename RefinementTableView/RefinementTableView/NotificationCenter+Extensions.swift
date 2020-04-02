@@ -16,4 +16,6 @@ extension Notification.Name {
     
     static let tappedSearchButton = Notification.Name("tappedSearchButton")
     static let tappedClearButton = Notification.Name("tappedClearButton")
+    
+    static let setCondition = Notification.Name("setCondition")
 }
