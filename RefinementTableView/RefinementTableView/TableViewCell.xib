@@ -17,15 +17,15 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX4-BZ-K4C">
-                        <rect key="frame" x="10" y="10" width="70" height="24"/>
+                        <rect key="frame" x="10" y="10" width="115" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRe-Np-PwJ">
-                        <rect key="frame" x="90" y="5" width="200" height="34"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRe-Np-PwJ">
+                        <rect key="frame" x="135" y="5" width="150" height="34"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="200" id="GlM-HG-4M7"/>
+                            <constraint firstAttribute="width" constant="150" id="GlM-HG-4M7"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
@@ -46,7 +46,7 @@
                     <constraint firstAttribute="bottom" secondItem="hRe-Np-PwJ" secondAttribute="bottom" constant="5" id="cSF-3J-Urr"/>
                     <constraint firstAttribute="trailing" secondItem="5Ah-jr-R6Q" secondAttribute="trailing" constant="5" id="fg0-kC-Stn"/>
                     <constraint firstAttribute="bottom" secondItem="5Ah-jr-R6Q" secondAttribute="bottom" constant="5" id="jYn-pf-L0E"/>
-                    <constraint firstItem="5Ah-jr-R6Q" firstAttribute="leading" secondItem="hRe-Np-PwJ" secondAttribute="trailing" constant="5" id="rUN-pR-PTO"/>
+                    <constraint firstItem="5Ah-jr-R6Q" firstAttribute="leading" secondItem="hRe-Np-PwJ" secondAttribute="trailing" constant="10" id="rUN-pR-PTO"/>
                     <constraint firstItem="bX4-BZ-K4C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="vhc-kQ-dsb"/>
                     <constraint firstItem="5Ah-jr-R6Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="x0A-c3-UbK"/>
                 </constraints>
