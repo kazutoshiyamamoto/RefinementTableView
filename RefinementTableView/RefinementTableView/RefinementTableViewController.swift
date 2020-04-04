@@ -42,9 +42,6 @@ class RefinementTableViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // カテゴリ選択画面から戻ってきた時にセルを更新して選択したカテゴリを表示
-        // TODO:戻ってきた時のみリロードするよう変更が必要
-        self.tableView.reloadData()
     }
     
     // カテゴリ選択すると呼ばれる
