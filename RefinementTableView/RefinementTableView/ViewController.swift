@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     private var searchController: UISearchController!
-
+    
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var minPrice: UILabel!
     @IBOutlet weak var maxPrice: UILabel!
@@ -35,11 +35,28 @@ class ViewController: UIViewController {
         self.minPrice.text = notification?.userInfo!["minPrice"] as? String
         self.maxPrice.text = notification?.userInfo!["maxPrice"] as? String
     }
-
+    
     @IBAction func tappedButton(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension ViewController: UISearchBarDelegate {
+    // 検索を開始せずに絞り込み条件設定画面に遷移
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        return false
+    }
+    
+    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    //        let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
+    //        let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
+    //        self.navigationController?.pushViewController(vc, animated: true)
+    //    }
 }
 
