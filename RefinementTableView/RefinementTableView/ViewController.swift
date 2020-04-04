@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var searchController: UISearchController!
 
     @IBOutlet weak var category: UILabel!
     @IBOutlet weak var minPrice: UILabel!
@@ -20,6 +22,8 @@ class ViewController: UIViewController {
         
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(type(of: self).setCondition(notification:)), name: .setCondition, object: nil)
+        
+        self.searchController = UISearchController(searchResultsController: nil)
     }
     
     @objc func setCondition(notification: NSNotification?) {
