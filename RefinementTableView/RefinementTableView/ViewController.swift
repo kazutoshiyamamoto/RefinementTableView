@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         center.addObserver(self, selector: #selector(type(of: self).setCondition(notification:)), name: .setCondition, object: nil)
         
         self.searchController = UISearchController(searchResultsController: nil)
+        self.searchController.searchBar.placeholder = "何かお探しですか"
     }
     
     @objc func setCondition(notification: NSNotification?) {
