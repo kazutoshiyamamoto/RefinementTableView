@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         self.searchController = UISearchController(searchResultsController: nil)
         self.searchController.searchBar.placeholder = "何かお探しですか"
         self.searchController.searchBar.delegate = self
+        self.navigationItem.searchController = self.searchController
     }
     
     @objc func setCondition(notification: NSNotification?) {
