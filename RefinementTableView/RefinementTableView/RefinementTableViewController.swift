@@ -40,10 +40,6 @@ class RefinementTableViewController: UIViewController {
         self.tableView.tableFooterView = UIView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     // カテゴリ選択すると呼ばれる
     @objc func setCategory(notification: NSNotification?) {
         self.category = notification?.userInfo!["category"] as! String
