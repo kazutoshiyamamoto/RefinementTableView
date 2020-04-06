@@ -40,9 +40,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JHZ-lg-M6X">
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JHZ-lg-M6X">
                                 <rect key="frame" x="0.0" y="88" width="375" height="690"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="rUJ-Xb-LRA" kind="embed" id="Wc4-e0-WeD"/>
                                 </connections>
@@ -50,10 +49,14 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="JHZ-lg-M6X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FpV-2D-R2B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Smz-BM-lxN" secondAttribute="trailing" constant="10" id="HIV-YF-Dc5"/>
+                            <constraint firstItem="JHZ-lg-M6X" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Hxq-6R-nZJ"/>
                             <constraint firstItem="aTO-U0-k9h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="M0V-J2-L9k"/>
                             <constraint firstItem="Smz-BM-lxN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="MJh-5j-8tT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pZO-WL-FYZ" secondAttribute="trailing" constant="10" id="Ox2-xO-PZ7"/>
+                            <constraint firstItem="JHZ-lg-M6X" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="PXZ-vP-Brq"/>
+                            <constraint firstItem="JHZ-lg-M6X" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Plo-wJ-Gzf"/>
                             <constraint firstItem="pGY-Sc-J0u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Wqe-gj-4ce"/>
                             <constraint firstItem="pZO-WL-FYZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="YDb-UR-qIp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pGY-Sc-J0u" secondAttribute="trailing" constant="10" id="Z26-Dr-6ih"/>
