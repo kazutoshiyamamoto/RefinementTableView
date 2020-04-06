@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var searchMenuView: UIView!
+    
     private var searchController: UISearchController!
     
     @IBOutlet weak var category: UILabel!
@@ -44,19 +46,24 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UISearchBarDelegate {
-    // 検索を開始せずに絞り込み条件設定画面に遷移
+    // 検索バー選択時に検索メニュー画面を表示
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.searchMenuView.alpha = 1.0
+        })
         
-        return false
+        return true
     }
     
-    //    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-    //        let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
-    //        let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
-    //        self.navigationController?.pushViewController(vc, animated: true)
-    //    }
+    // 検索バーのキャンセルボタンを選択時に検索メニューを非表示にする
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.searchMenuView.alpha = 0.0
+        })
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        print("検索実行")
+    }
 }
 
