@@ -23,6 +23,7 @@
 		FD3E88F1242CDE0200E028B7 /* RunCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD3E88EF242CDE0200E028B7 /* RunCell.xib */; };
 		FD3E88F52433156700E028B7 /* NotificationCenter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD3E88F42433156700E028B7 /* NotificationCenter+Extensions.swift */; };
 		FDAC498E243B4755004173D5 /* SearchMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDAC498D243B4755004173D5 /* SearchMenuViewController.swift */; };
+		FDAC4990243B47BC004173D5 /* SearchMenuView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDAC498F243B47BC004173D5 /* SearchMenuView.storyboard */; };
 		FDFCC9D5241260BD00DDA38A /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */; };
 		FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		FD3E88EF242CDE0200E028B7 /* RunCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RunCell.xib; sourceTree = "<group>"; };
 		FD3E88F42433156700E028B7 /* NotificationCenter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extensions.swift"; sourceTree = "<group>"; };
 		FDAC498D243B4755004173D5 /* SearchMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMenuViewController.swift; sourceTree = "<group>"; };
+		FDAC498F243B47BC004173D5 /* SearchMenuView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchMenuView.storyboard; sourceTree = "<group>"; };
 		FDFCC9D3241260BD00DDA38A /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		FDFCC9D4241260BD00DDA38A /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,6 +86,7 @@
 				FD03D9562411488400C20FC0 /* SceneDelegate.swift */,
 				FD03D95A2411488400C20FC0 /* Main.storyboard */,
 				FD03D9582411488400C20FC0 /* ViewController.swift */,
+				FDAC498F243B47BC004173D5 /* SearchMenuView.storyboard */,
 				FDAC498D243B4755004173D5 /* SearchMenuViewController.swift */,
 				FD03D96C24125C1300C20FC0 /* RefinementTable.storyboard */,
 				FD03D96A24125BD800C20FC0 /* RefinementTableViewController.swift */,
@@ -167,6 +170,7 @@
 				FDFCC9D6241260BD00DDA38A /* TableViewCell.xib in Resources */,
 				FD03D95E2411488700C20FC0 /* Assets.xcassets in Resources */,
 				FD03D96D24125C1300C20FC0 /* RefinementTable.storyboard in Resources */,
+				FDAC4990243B47BC004173D5 /* SearchMenuView.storyboard in Resources */,
 				FD37DC682419334400AA9AB5 /* PriceCell.xib in Resources */,
 				FD03D95C2411488400C20FC0 /* Main.storyboard in Resources */,
 			);
