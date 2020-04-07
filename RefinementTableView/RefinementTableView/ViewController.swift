@@ -34,12 +34,14 @@ class ViewController: UIViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = false
     }
     
+    // 絞り込み画面で検索実行すると呼ばれる
     @objc func setCondition(notification: NSNotification?) {
         self.category.text = notification?.userInfo!["category"] as? String
         self.minPrice.text = notification?.userInfo!["minPrice"] as? String
         self.maxPrice.text = notification?.userInfo!["maxPrice"] as? String
     }
     
+    // 絞り込み画面へ遷移
     @IBAction func tappedButton(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "RefinementTable", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "RefinementTable") as! RefinementTableViewController
