@@ -28,29 +28,39 @@ class ViewController: UIViewController {
         let center = NotificationCenter.default
         center.addObserver(self, selector: #selector(type(of: self).setCondition(notification:)), name: .setCondition, object: nil)
         
-//        self.searchController = UISearchController(searchResultsController: nil)
-//        self.searchController.searchBar.placeholder = "何かお探しですか"
-//        self.searchController.searchBar.delegate = self
-//        // 検索中に元のコンテンツをグレーアウトしないようにする
-//        self.searchController.obscuresBackgroundDuringPresentation = false
-//        self.navigationItem.searchController = self.searchController
-//        self.navigationItem.hidesSearchBarWhenScrolling = false
+        //        self.searchController = UISearchController(searchResultsController: nil)
+        //        self.searchController.searchBar.placeholder = "何かお探しですか"
+        //        self.searchController.searchBar.delegate = self
+        //        // 検索中に元のコンテンツをグレーアウトしないようにする
+        //        self.searchController.obscuresBackgroundDuringPresentation = false
+        //        self.navigationItem.searchController = self.searchController
+        //        self.navigationItem.hidesSearchBarWhenScrolling = false
         
         self.setupSearchBar()
     }
     
     func setupSearchBar() {
-          if let navigationBarFrame = navigationController?.navigationBar.bounds {
-              let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
-              searchBar.delegate = self
-              searchBar.placeholder = "何かお探しですか"
-//              searchBar.tintColor = UIColor.gray
-//              searchBar.keyboardType = UIKeyboardType.default
-              navigationItem.titleView = searchBar
-              navigationItem.titleView?.frame = searchBar.frame
-              self.searchBar = searchBar
-          }
-      }
+        if let navigationBarFrame = navigationController?.navigationBar.bounds {
+            let searchBar: UISearchBar = UISearchBar(frame: navigationBarFrame)
+            searchBar.delegate = self
+            searchBar.placeholder = "何かお探しですか"
+            //              searchBar.tintColor = UIColor.gray
+            //              searchBar.keyboardType = UIKeyboardType.default
+            // アイコンの色
+            searchBar.searchTextField.leftView?.tintColor = .lightGray
+            // 入力した文字の色
+            searchBar.searchTextField.textColor = .white
+            // 入力した文字の大きさ
+            searchBar.searchTextField.font = UIFont.systemFont(ofSize: 14)
+            // キャンセルボタンの色
+            let attributes: [NSAttributedString.Key: Any] = [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 14)]
+            // キャンセルボタンのフォント
+            UIBarButtonItem.appearance(whenContainedInInstancesOf: [UISearchBar.self]).setTitleTextAttributes(attributes, for: .normal)
+            navigationItem.titleView = searchBar
+            navigationItem.titleView?.frame = searchBar.frame
+            self.searchBar = searchBar
+        }
+    }
     
     // 絞り込み画面で検索実行すると呼ばれる
     @objc func setCondition(notification: NSNotification?) {
