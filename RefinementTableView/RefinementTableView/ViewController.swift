@@ -108,6 +108,9 @@ extension ViewController: UISearchBarDelegate {
             if let searchHistory = UserDefaults.standard.stringArray(forKey: "searchHistory") {
                 var array = [String]()
                 array = searchHistory
+                if array.count == 10 {
+                    array.remove(at: 9)
+                }
                 array.insert(text, at: 0)
                 UserDefaults.standard.set(array, forKey: "searchHistory")
             } else {
