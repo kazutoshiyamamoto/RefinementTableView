@@ -104,6 +104,18 @@ extension ViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         print("検索実行")
+        if let text = self.searchBar.searchTextField.text {
+            if let searchHistory = UserDefaults.standard.stringArray(forKey: "searchHistory") {
+                var array = [String]()
+                array = searchHistory
+                array.insert(text, at: 0)
+                UserDefaults.standard.set(array, forKey: "searchHistory")
+            } else {
+                var array = [String]()
+                array.append(text)
+                UserDefaults.standard.set(array, forKey: "searchHistory")
+            }
+        }
     }
 }
 
