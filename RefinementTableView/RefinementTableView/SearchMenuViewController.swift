@@ -66,6 +66,25 @@ extension SearchMenuViewController: UITableViewDataSource {
         }
         return cell
     }
+    
+    // セルの編集
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        // 検索履歴を表示するセクションはスワイプでセルを削除可能にする
+        if indexPath.section == 1 {
+            if editingStyle == .delete {
+                // 削除前の検索履歴を削除
+                UserDefaults.standard.removeObject(forKey: "searchHistory")
+                // 削除対象の要素を配列から削除
+                self.searchHistory.remove(at: indexPath.row)
+                // 削除対象のセルを削除
+                self.tableView.deleteRows(at: [indexPath], with: .fade)
+                // 削除対象の要素が覗かれた配列searchHistoryをUserDefaultsで保存
+                UserDefaults.standard.set(self.searchHistory, forKey: "searchHistory")
+                
+                print(UserDefaults.standard.stringArray(forKey: "searchHistory") ?? [])
+            }
+        }
+    }
 }
 
 extension SearchMenuViewController: UITableViewDelegate {
