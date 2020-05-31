@@ -72,7 +72,7 @@ extension SearchMenuViewController: UITableViewDataSource {
         // 検索履歴を表示するセクションはスワイプでセルを削除可能にする
         if indexPath.section == 1 {
             if editingStyle == .delete {
-                // 削除前の検索履歴を削除
+                // 削除前のUserDefaultsに保存された検索履歴を削除
                 UserDefaults.standard.removeObject(forKey: "searchHistory")
                 // 削除対象の要素を配列から削除
                 self.searchHistory.remove(at: indexPath.row)
